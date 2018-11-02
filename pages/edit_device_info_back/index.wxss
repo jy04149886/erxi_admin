@@ -1,0 +1,256 @@
+/**index.wxss**/
+
+.userinfo {
+  display: block;
+  height: 160rpx;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin-left: 40rpx;
+  border-radius: 50%;
+  float: left;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+  display: block;
+  margin: 0 auto;
+  line-height: 128rpx;
+  width: 60%;
+  text-align: center;
+}
+
+.form_input{
+  width: 100%;
+  height: 120rpx;
+  border-bottom: solid 2rpx #E8E8E8;
+  border-top: none;
+}
+
+.form_input input{
+  line-height: 120rpx;
+  height: 80rpx;
+  margin-top: 20rpx;
+  width: 400rpx;
+}
+
+.form_input image{
+  width: 30rpx;
+  height: 40rpx;
+  line-height: 120rpx;
+  display: block;
+  float: right;
+  margin-top: 40rpx;
+}
+
+.form_subbtn{
+  padding-top: 40rpx;
+  width: 100%;
+  height: 100rpx;
+}
+
+.subbtn{
+   width: 600rpx; 
+  /* height: 46px; */
+  border-radius: 60rpx;
+}
+
+.form_input label{
+  float: left;
+  font-size: 36rpx;
+  line-height: 120rpx;
+  height: 80rpx;
+  font-weight: 900;
+  width:200rpx;
+}
+
+.placeholdtext{
+  float: right;
+  color: #CACACA;
+  line-height: 120rpx;
+}
+
+.form_input input{
+  padding-left:10rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  width: 400rpx;
+  float:left;
+
+}
+
+.form_input button{
+  width: 200rpx;
+  float: right;
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 60rpx;
+  border: solid 2rpx #FF6500;
+  color: #FF6500;
+  font-weight: 300;
+}
+
+.nav_subbtn{
+  padding-top: 40rpx;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.line {
+  width: 100%;
+  height: 6rpx;
+  background-color: #E8E8E8;
+}
+
+.usermotto {
+  margin-top: 10rpx;
+  width: 100%;
+}
+
+.editinfobtn {
+  position: fixed;
+  right: 20rpx;
+  top: 20rpx;
+  width: 160rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  border-radius: 30rpx;
+  border: solid 2rpx #999;
+  color: #999;
+}
+
+.pagestyle {
+  /* background-color: #efeff4; */
+  height: 100%;
+  overflow: scroll;
+}
+
+.radio-group {
+}
+
+.radio-group label {
+  float: left;
+  width: 100%;
+  height: 300rpx;
+  /* line-height: 200px; *//* position: fixed; */
+}
+
+.itemcardlist {
+}
+
+.itemcardswitch {
+  float: right;
+}
+
+.itemcard {
+  width: 90%;
+  height: 200rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  /* background-color:  */
+  background: linear-gradient(#ffa114, #ff7114);
+}
+
+.itemcard_dis {
+  width: 90%;
+  height: 200rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  background-color: #c8c8c8;
+  /* background:linear-gradient(#FFA114, #FF7114);  */
+}
+
+.itemcardrow1 {
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 70%;
+  margin: 0 auto;
+  text-indent: center;
+  padding-top: 20rpx;
+  display: block;
+  color: white;
+  padding-left: 20%;
+}
+
+.item-avatar {
+  width: 60rpx;
+  height: 60rpx;
+  /* margin: 20rpx; */
+  border-radius: 50%;
+  display: block;
+  margin-left: 5%;
+  float: left;
+}
+
+.itemcardrow1_text1 {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 0 auto;
+  display: block;
+  float: left;
+  font-size: 28rpx;
+  /* padding-bottom: 10px; */
+}
+
+.itemcardrow1_text2 {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 0 auto;
+  display: block;
+  float: left;
+  margin-left: 5%;
+  font-size: 32rpx;
+  /* padding-bottom: 10px; */
+}
+
+.itemcardrow2 {
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 90%;
+  margin: 0 auto;
+  text-indent: center;
+  padding-top: 20rpx;
+  display: block;
+  color: white;
+}
+
+.itemcardrow2_text1 {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 0 auto;
+  display: block;
+  float: left;
+  /* padding-bottom: 10px; */
+}
+
+.itemcardrow2_text2 {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 0 auto;
+  display: block;
+  float: left;
+  margin-left: 5%;
+  font-size: 50rpx;
+  /* padding-bottom: 10px; */
+}
+
+.itemcardrow2_btn1 {
+  width: 160rpx;
+  font-size: 24rpx;
+  border-radius: 30rpx;
+  float: right;
+}
+
+.item_checkbox {
+  float: right;
+  /* position: absolute; *//* border-radius: 100%; *//* background-color: red; *//* opacity:0; */
+}

@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo" bindtap="bindViewTap">
+      <text class="userinfo-nickname" style="color:#000;font-weight:500">资费问题:</text>
+      <image class="userinfo-avatar" src="{{Path}}" background-size="cover"></image>
+  </view>
+  <view class='_line'></view>
+  <view class="userinfo" bindtap="bindViewTap">
+      <text class="userinfo-nickname" style="color:#000;font-weight:500">余额处理:</text>
+      <image class="userinfo-avatar" src="{{Path}}" background-size="cover"></image>
+  </view>
+  <view class='_line'></view>
+  <view class="userinfo" bindtap="bindViewTap">
+      <text class="userinfo-nickname" style="color:#000;font-weight:500">连接异常:</text>
+      <image class="userinfo-avatar" src="{{Path}}" background-size="cover"></image>
+  </view>
+  <view class='_line'></view>
+  <view class="userinfo" bindtap="bindViewTap">
+      <text class="userinfo-nickname" style="color:#000;font-weight:500">其他问题:</text>
+      <image class="userinfo-avatar" src="{{Path}}" background-size="cover"></image>
+  </view>
+  <view class='_line'></view>
+  <view class="userinfo" bindtap="bindViewTap">
+      <text class="userinfo-nickname" style="color:#000;font-weight:500">联系我们:</text>
+      <image class="userinfo-avatar" src="{{Path}}" background-size="cover"></image>
+  </view>
+  <view class='_line'></view>
+</view>

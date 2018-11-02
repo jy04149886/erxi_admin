@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<view class="container pagestyle" style=''>
+
+  <view class="usermotto">
+    <view class="itemcardlist">
+      <label class="radio">
+        <view class="itemcard">
+          <view class="itemcardrow1">
+            <text class="itemcardrow1_text1">{{device_detail.device_name}}的设备SIM</text>
+            <!-- <radio class="item_checkbox" value="1" checked="1" color="#FF9600" style='' /> -->
+          </view>
+          <!-- <view class="itemcardrow2">
+            <text class="itemcardrow2_text1">剩余短信数量</text>
+            <text style='font-size:40rpx' class="itemcardrow2_text3">{{device_detail.text_number}}</text>
+          </view> -->
+          <view class="itemcardrow2">
+            <text class="itemcardrow2_text1">激活时间</text>
+            <text class="itemcardrow2_text3">{{device_detail.start_time}}</text>
+          </view>
+          <view class="itemcardrow2">
+            <text class="itemcardrow2_text1">会员到期时间</text>
+            <text class="itemcardrow2_text3">{{device_detail.end_time}}</text>
+          </view>
+          <!-- <view class="itemcardrow2">
+            <button class="itemcardrow2_btn1">续费</button>
+          </view> -->
+        </view>
+        <view class="pay_detail">
+          <!-- <text>充值金额</text>
+          <view wx:for="{{textlist}}" wx:key="{{item}}">
+            <view class="price_view" bindtap='startpay' data-price="{{item.price}}" data-itemid="{{item.id}}">
+              <text>{{item.price}}元/月</text>
+              <text style='font-weight:Medium;font-size:28rpx;color:#999999'>{{item.specifi}}条</text>
+            </view>
+          </view> -->
+          <text>SIM卡流量续费</text>
+          <view wx:for="{{gpslist}}" wx:key="{{item}}">
+            <view class="price_view" bindtap='startpay' data-price="{{item.price}}" data-itemid="{{item.id}}">
+              <text>{{item.price}}元/年</text>
+              <text style='font-weight:Medium;font-size:28rpx;color:#999999'>{{item.specifi}}</text>
+            </view>
+          </view>
+        </view>
+      </label>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<!-- <import src="/zanui-weapp-dev/dist/field/index.wxml" /> -->
+<view class="container pagestyle" style=''>
+  <view class="userinfo">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatar}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.user_nickname}}</text>
+  </view>
+  <view class="line"></view>
+
+  <view class="zan-panel" style="width:90%;">
+    <block wx:if="{{login_type=='mm'}}">
+      <view class="form_input" bindtap='listenbindweixin'>
+        <label>微信</label>
+        <image class="arrow" src="{{Path}}"></image>
+        <text class="placeholdtext">{{isopenidtext}}</text>
+      </view>
+      <navigator class="form_input" url='/pages/edit_password/index'>
+        <label>登陆密码</label>
+        <image class="arrow" src="{{Path}}"></image>
+        <text class="placeholdtext">修改</text>
+      </navigator>
+    </block>
+
+    <block wx:elif="{{login_type=='wx'}}">
+      <view class="form_input" bindtap='listenbindmibile'>
+        <label>手机号</label>
+        <image class="arrow" src="{{Path}}"></image>
+        <text class="placeholdtext">{{ismobiletext}}</text>
+      </view>
+    </block>
+
+    <view class="form_subbtn">
+      <button type="default" bindtap='logout' class="subbtn" size="default" style='background-color: #FF6500;color:white'>退出登陆</button>
+    </view>
+  </view>
+
+</view>

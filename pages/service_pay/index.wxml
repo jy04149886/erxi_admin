@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container pagestyle" style=''>
+
+  <view class="usermotto">
+    <!-- <text class="user-motto">{{motto}}</text> -->
+    <view class="itemcardlist">
+      <label class="radio">
+        <view wx:for="{{devicelist}}" wx:key="{{item}}">
+            <view class="itemcard">
+              <view class="itemcardrow1">
+                <text class="itemcardrow1_text1">{{item.device_name}}的设备</text>
+              </view>
+              <view class="itemcardrow2">
+                <!-- <text class="itemcardrow2_text1">剩余短信数量</text> -->
+                <text class="itemcardrow2_text2">年费会员到期时间</text>
+                <!-- <button class="itemcardrow2_btn1">查看详情</button> -->
+              </view>
+              <view class="itemcardrow2">
+                <!-- <text class="itemcardrow2_text3">{{item.text_number}}</text> -->
+                <text class="itemcardrow2_text4">{{item.end_time}}</text>
+              </view>
+              <view class="itemcardrow2">
+                <button class="itemcardrow2_btn1" bindtap='listenCharg' data-id="{{item.id}}">续费</button>
+              </view>
+            </view>
+        </view>
+        <view style='margin:0 auto'>
+          <text>{{device_text}}</text>
+        </view>
+      </label>
+    </view>
+  </view>
+</view>

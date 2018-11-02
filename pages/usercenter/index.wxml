@@ -1,0 +1,95 @@
+<!--index.wxml-->
+<view class="container pagestyle" style=''>
+  <view class="userinfo">
+    <!-- <button class="gobackbtn" bindtap='listengobackbtn'>地图</button> -->
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatar}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.user_nickname}}</text>
+    <button class="editinfobtn" bindtap='listenEdituserinfo' open-type="getUserInfo">编辑资料</button>
+  </view>
+  <view class="line"></view>
+  <view class="usermotto">
+    <!-- <text class="user-motto">{{motto}}</text> -->
+    <view class="itemcardlist">
+      <!-- <radio-group class="radio-group" bindchange="radioChange"> -->
+      <label class="radio">
+        <text class='mydevicelabel'>我的设备</text>
+        <!-- <radio value="" checked="" />我的设备
+        <switch class='itemcardswitch'></switch> -->
+        <radio-group class="radio-group" bindchange="listenerSetCurrentDevice">
+          <view wx:for="{{devicelist}}" wx:key="{{item}}">
+            <block wx:if="{{item.is_current!=null}}">
+              <view class="itemcard" style='background-image: url({{mine_bg}})'>
+                <view class="itemcardrow1">
+                  <text class="itemcardrow1_text1">当前设备</text>
+                  <image bindtap="listenItemDetail" data-id="{{item.id}}" class="item-avatar" src="{{item.avatar?item.avatar:head_mine}}" background-size="cover"></image>
+                  <text class='itemcardrow1_text2'>{{item.device_name}}</text>
+                  <radio class="item_checkbox" value="{{item.id}}" checked="{{item.is_current}}" color="#FF9600" style='' />
+
+                </view>
+                <view class="itemcardrow2">
+                  <text class="itemcardrow2_text1">IMEI</text>
+                  <text class="itemcardrow2_text2">{{item.imei}}</text>
+                  <button class="itemcardrow2_btn1" data-id="{{item.id}}" bindtap='listenItemDetail'>查看详情</button>
+                </view>
+                <view class="itemcardrow2">
+                </view>
+              </view>
+            </block>
+            <block wx:if="{{item.is_current==null}}">
+              <view class="itemcard_dis" style='background-image: url({{more_bg_nol}})'>
+                <view class="itemcardrow1">
+                  <text class="itemcardrow1_text1"></text>
+                  <image bindtap="listenItemDetail" data-id="{{item.id}}" class="item-avatar" src="{{item.avatar?item.avatar:head_mine}}" background-size="cover"></image>
+                  <text class='itemcardrow1_text2'>{{item.device_name}}</text>
+                  <radio class="item_checkbox" value="{{item.id}}" checked="{{item.is_current}}" color="#FF9600" style='' />
+                </view>
+                <view class="itemcardrow2">
+                  <text class="itemcardrow2_text1">IMEI</text>
+                  <text class="itemcardrow2_text2">{{item.imei}}</text>
+                  <button style="background-color:#D6D5D5" class="itemcardrow2_btn1" data-id="{{item.id}}" bindtap='listenItemDetail'>查看详情</button>
+                </view>
+                <view class="itemcardrow2">
+                </view>
+              </view>
+            </block>
+          </view>
+        </radio-group>
+      </label>
+    </view>
+
+  </view>
+  <view style="width:95%;height:60rpx;padding:20rpx;" bindtap='listenadddevice'>
+    <image style='width:24rpx;height:24rpx;display:block;margin-top:10rpx;float:left;padding-left:20rpx;' src='{{mine_add}}'></image>
+    <text style="margin-left:20rpx;float:left;font-size:26rpx;font-family:PingFang-SC-Medium;font-weight:Medium">添加设备</text>
+  </view>
+
+  <view class="line"></view>
+
+  <view class="list_view" bindtap='listenpayservice'>
+    <image class='list_img' src='{{mine_rs}}'></image>
+    <text class="list_text">服务续费</text>
+    <image class='list_img1' src='{{Path}}'></image>
+  </view>
+
+  <view class="line"></view>
+  <!-- <view class="list_view" bindtap='listenmessage'>
+    <image class='list_img' src='{{mine_news}}'></image>
+    <text class="list_text">我的消息</text>
+    <image class='list_img1' src='{{Path}}'></image>
+  </view>
+
+  <view class="line_1"></view> -->
+  <view class="list_view" bindtap='listenproblem'>
+    <image class='list_img' src='{{mine_que}}'></image>
+    <text class="list_text">常见问题</text>
+    <image class='list_img1' src='{{Path}}'></image>
+  </view>
+
+  <view class="line_1"></view>
+  <view class="list_view" bindtap='listencontract'>
+    <image class='list_img' src='{{mine_call}}'></image>
+    <text class="list_text">联系我们</text>
+    <image class='list_img1' src='{{Path}}'></image>
+  </view>
+
+</view>

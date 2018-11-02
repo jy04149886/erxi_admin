@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<!-- <import src="/zanui-weapp-dev/dist/field/index.wxml" /> -->
+<view class="container pagestyle" style=''>
+
+  <view class="zan-panel" style="width:90%;">
+    <view class="form_input">
+      <label>联系人</label>
+      <input bindinput="listenerContract" placeholder="请输入联系人" value="{{contract}}"/>
+    </view>
+    <view class="form_input">
+      <label>联系人电话</label>
+      <input bindinput="listenerContractPhone" placeholder="请输入联系人电话"  value="{{contract_phone}}"/>
+    </view>
+    <view class="form_input">
+      <label>设备手机号</label>
+      <input bindinput="listenerDevicePhone" placeholder="请输入设备手机号"  value="{{device_phone}}"/>
+    </view>
+    <view class="form_input">
+      <label>联系人</label>
+      <input bindinput="listenerDeviceName" placeholder="请输入设备名称"  value="{{device_name}}"/>
+    </view>
+    <view class="form_subbtn">
+      <button type="default" bindtap='submit_info' class="subbtn" size="default" style='background-color: #FF6500;color:white;width:100%'>确定</button>
+    </view>
+  </view>
+
+</view>
+
+<view class="zan-popup {{ showPopup ? 'zan-popup--show' : ''}}">
+  <view class="zan-popup__mask" bindtap="togglePopup"></view>
+  <view class="zan-popup__container popup-example--center">
+    <view class="zan-btns">
+      <button class="zan-btn" bindtap="closePopup">
+        {{login_msg}}
+      </button>
+    </view>
+  </view>
+</view>

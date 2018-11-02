@@ -1,0 +1,86 @@
+.field__title--radius {
+  padding-bottom: 20rpx;
+}
+
+.userinfo image {
+  width: 750rpx;
+  height: 338rpx;
+}
+
+.popup-field-example--bottom {
+  width: 100%;
+  height: 300rpx;
+}
+
+.picker-view-example {
+  height: 240rpx;
+}
+
+.picker-view-column-example {
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.form_input {
+  width: 100%;
+  height: 120rpx;
+  border-bottom: solid 2rpx #ff6500;
+  border-top: none;
+  padding-top: 40rpx;
+}
+
+.form_subbtn {
+  padding-top: 40rpx;
+  width: 100%;
+  height: 100rpx;
+}
+
+.subbtn {
+  width: 600rpx;
+  height: 92rpx;
+  border-radius: 46rpx;
+  
+  font-family: "PingFang-SC-Regular";
+  font-weight: Regular;
+  font-size: 36rpx;
+}
+
+.form_input label {
+  float: left;
+  line-height: 80rpx;
+  height: 80rpx;
+  font-family: "PingFang-SC-Bold";
+  font-weight: Bold;
+  font-size: 36rpx;
+}
+
+.form_input input {
+  padding-left: 10rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  width: 350rpx;
+  float: left;
+}
+
+.checkbtn {
+  width: 190rpx;
+  float: right;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 36rpx;
+  border: solid 2rpx #ff6500;
+  color: #ff6500;
+  font-weight: Medium;
+  font-size: 24rpx;
+  font-family: "PingFang-SC-Medium";
+}
+
+.subbtn {
+  width: 600rpx;
+  height: 92rpx;
+  border-radius: 46rpx;
+  
+  font-family: "PingFang-SC-Regular";
+  font-weight: Regular;
+  font-size: 36rpx;
+}

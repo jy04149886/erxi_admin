@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<!-- <import src="/zanui-weapp-dev/dist/field/index.wxml" /> -->
+<view class="container pagestyle" style=''>
+
+  <view class="zan-panel" style="width:90%;">
+    <view class="form_input">
+      <label>新昵称</label>
+      <input type='text' bindinput='listendevicename' class='inputname'></input>
+    </view>
+    <view class="form_subbtn">
+      <button bindtap='listensubmit' type="default" class="subbtn" size="default" style='background-color: #FF6500;color:white;width:100%'>确定</button>
+    </view>
+  </view>
+
+</view>

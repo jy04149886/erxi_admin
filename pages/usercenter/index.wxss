@@ -1,0 +1,247 @@
+/**index.wxss**/
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 230rpx;
+}
+
+.userinfo-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #141414;
+  font-weight: Bold;
+  font-family: PingFang-SC-Bold;
+  font-size: 32rpx;
+}
+
+.line {
+  width: 100%;
+  height: 12rpx;
+  background-color: #efeff4;
+}
+
+.line_1{
+  
+  width: 100%;
+  height: 2rpx;
+  background-color: #efeff4;
+}
+
+.usermotto {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.editinfobtn {
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  width: 180rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  border-radius: 24rpx;
+  border: solid 2rpx #D2D2D2;
+  color: #999999;
+  font-family: PingFang-SC-Medium;
+  font-weight: Medium;
+  font-size: 24rpx;
+  background-color: white;
+}
+
+.gobackbtn {
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 25rpx;
+  border-radius: 30rpx;
+  border: solid 1rpx #D2D2D2;
+}
+
+.pagestyle {
+  /* background-color: #efeff4; */
+  /* height: 100%; */
+  /* overflow: scroll; */
+  background-color: #fff
+}
+
+.mydevicelabel {
+  font-size: 40rpx;
+  margin-left: 50rpx;
+  font-weight: 400
+}
+
+.radio-group label {
+  float: left;
+  width: 100%;
+  height: 250rpx;
+  /* line-height: 200px; *//* position: fixed; */
+}
+
+.itemcardlist {
+}
+
+.itemcardswitch {
+  float: right;
+}
+
+.itemcard {
+  width: 90%;
+  height: 250rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  background-size: 100% 100%;
+}
+
+.itemcard_dis {
+  width: 90%;
+  height: 250rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  background-color: #c8c8c8;
+  background-size: 100% 100%;
+  /* background:linear-gradient(#FFA114, #FF7114);  */
+}
+
+.itemcardrow1 {
+  height: 120rpx;
+  line-height: 120rpx;
+  width: 70%;
+  margin: 0 auto;
+  text-indent: center;
+  padding-top: 20rpx;
+  display: block;
+  color: white;
+  padding-left: 20%;
+}
+
+.item-avatar {
+  width: 60rpx;
+  height: 60rpx;
+  /* margin: 20rpx; */
+  border-radius: 50%;
+  display: block;
+  margin-left: 5%;
+  float: left;
+}
+
+.itemcardrow1_text1 {
+  height: 120rpx;
+  width: 120rpx;
+  line-height: 120rpx;
+  margin: 0 auto;
+  display: block;
+  float: left;
+  font-size: 24rpx;
+  /* padding-bottom: 10px; */
+}
+
+.itemcardrow1_text2 {
+  height: 120rpx;
+  width: 120rpx;
+  line-height: 120rpx;
+  margin: 0 auto;
+  display: block;
+  float: left;
+  margin-left: 5%;
+  font-size: 24rpx;
+  /* width: 160rpx; */
+  overflow: hidden;
+  /* padding-bottom: 10px; */
+}
+
+.itemcardrow2 {
+  height: 120rpx;
+  line-height: 120rpx;
+  width: 90%;
+  margin: 0 auto;
+  text-indent: center;
+  padding-top: 20rpx;
+  display: block;
+  color: white;
+}
+
+.itemcardrow2_text1 {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 0 auto;
+  display: block;
+  float: left;
+  font-size: 36rpx;
+  /* padding-bottom: 10px; */
+}
+
+.itemcardrow2_text2 {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 0 auto;
+  display: block;
+  float: left;
+  margin-left: 5%;
+  font-size: 36rpx;
+  font-weight: 900;
+  width: 340rpx;
+  overflow: hidden;
+  /* padding-bottom: 10px; */
+}
+
+.itemcardrow2_btn1 {
+  width: 160rpx;
+  font-size: 24rpx;
+  border-radius: 30rpx;
+  float: right;
+  background-color:  #FAC312;
+  color: #fff
+}
+
+.item_checkbox {
+  float: right;
+  /* position: absolute; *//* border-radius: 100%; *//* background-color: red; *//* opacity:0; */
+}
+
+.list_view {
+  width: 95%;
+  height: 88rpx;
+}
+
+.list_img {
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+  margin-top: 30rpx;
+  float: left;
+  padding-left: 20rpx;
+}
+
+.list_text {
+  margin-left: 30rpx;
+  float: left;
+  margin-top: 20rpx;
+  font-family: "Adobe Heiti Std R";
+  font-weight: "R";
+  font-size: 34rpx;
+}
+
+.list_img1 {
+  width: 16rpx;
+  height: 26rpx;
+  display: block;
+  margin-top: 30rpx;
+  float: right;
+  padding-left: 20rpx;
+}
+
+page{
+  background-color: #EFEFF4;
+}

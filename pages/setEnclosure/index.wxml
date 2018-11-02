@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<!-- <import src="/zanui-weapp-dev/dist/switch/index.wxml" /> -->
+
+
+<!-- <map id="map" longitude="{{location.longitude}}" latitude="{{location.latitude}}" scale="5" bindcontroltap="controltap" polyline="{{polyline}}" markers="{{markers}}" circles="{{circles}}" bindmarkertap="markertap" bindregionchange="regionchange" show-location bindtap="bindtapMap"
+  style="width: 100%; height: {{screen_height}}rpx;">
+
+  <cover-view class="map_panel_img1">
+<input  bindinput="bindKeyInput" placeholder="搜索位置"/>
+  </cover-view>
+
+</map> -->
+
+  <view style='width:100%;float:left;padding-top:30rpx;'>
+    <button bindtap='chooseLocationListner' class='complete_btn'>选择地址</button>
+  </view>
+
+<view class="map_panel" style='' bindtap='listen_start_follow'>
+  <view style='margin-left:40rpx; margin-top:40rpx'>
+    <image style="width: 32rpx; height: 44rpx;float:left" mode="{{item.mode}}" src="{{dingwei}}"></image>
+    <text style="width: 300rpx; height: 56rpx;font-family:PingFangHK;font-weight:Regular;font-size:40rpx;margin-left:20rpx；float:left;margin-left:20rpx;">{{device_name}}</text>
+  </view>
+  <view style='width:80%'>
+    <text style=" height: 36rpx;font-family:PingFangHK;font-weight:Regular;font-size:24rpx;color:#888888;float:left;margin-left:90rpx;margin-top:20rpx">{{location_name}}</text>
+  </view>
+
+  <view style="float:left;margin-left:5%;width:90%;">
+    <slider value="{{range}}" bindchange="listenSetrange" min="0" max="1000" show-value selected-color="#FF6500" block-color="#FF9A01" />
+  </view>
+
+  <text style="width: 400rpx; height: 36rpx;font-family:PingFangHK;font-weight:Regular;font-size:24rpx;color:#888888;float:left;margin-left:50rpx;margin-top:20rpx">滑动滑块调整安全距离半径：{{range}}米</text>
+
+  <view style='width:100%;float:left;padding-top:30rpx;'>
+    <button class='complete_btn' bindtap='complete_submit'>完成</button>
+  </view>
+
+</view>

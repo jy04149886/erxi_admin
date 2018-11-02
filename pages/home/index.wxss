@@ -1,0 +1,377 @@
+.field__title--radius {
+  padding-bottom: 20rpx;
+}
+
+.popup-field-example--bottom {
+  width: 100%;
+  height: 300rpx;
+}
+
+.picker-view-example {
+  height: 240rpx;
+}
+
+.picker-view-column-example {
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.singnal_point {
+  margin-top: 36rpx;
+  width: 8rpx;
+  height: 8rpx;
+  /* background-color: #09bb07; */
+  border-radius: 100%;
+  float: left;
+  margin-left: 6rpx;
+}
+
+.form_input {
+  width: 100%;
+  height: 120rpx;
+  border-bottom: solid 1px #ff6500;
+  border-top: none;
+  padding-top: 40rpx;
+}
+
+.form_subbtn {
+  padding-top: 40rpx;
+  width: 100%;
+  height: 100rpx;
+}
+
+.subbtn {
+  width: 600rpx;
+  /* height: 46px; */
+  border-radius: 60rpx;
+}
+
+.form_input label {
+  float: left;
+  font-size: 48rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  font-weight: 900;
+}
+
+.form_input input {
+  padding-left: 10rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  width: 200rpx;
+  float: left;
+}
+
+.form_input button {
+  width: 200rpx;
+  float: right;
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 80rpx;
+  border: solid 2rpx #ff6500;
+  color: #ff6500;
+  font-weight: 300;
+}
+
+.map_view {
+  width: 100%;
+  height: 100%;
+}
+
+.map_panel {
+  width: 750rpx;
+  height: 204rpx;
+  /* background: linear-gradient(to right, #ff9901, #ff6500); */
+  bottom: 0rpx;
+  /* z-index: 10;  */
+  margin: 0 auto;
+  /* margin-left: 5%; *//* display: flex; */
+  position: fixed;
+  /* border-radius: 100% 100% 0 0; *//* display: block; */
+}
+
+.map_panel1 {
+  width: 750rpx;
+  height: 204rpx;
+  /* background: #ff8c00; */
+  bottom: 0rpx;
+  /* z-index: 900; */
+  margin: 0 auto;
+  /* margin-left: 5%; *//* display: flex; */
+  position: fixed;
+  /* border-radius: 100% 100% 0 0; *//* display: block; */
+}
+
+.map_panel2 {
+  width: 750rpx;
+  height: 204rpx;
+  /* background: #ff4801; */
+  bottom: 0rpx;
+  /* z-index: 999; */
+  margin: 0 auto;
+  /* margin-left: 5%; *//* display: flex; */
+  position: fixed;
+  /* border-radius: 100% 100% 0 0; *//* display: block; */
+}
+
+.map_panel_btn1 {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 10rpx;
+  text-align: center;
+  font-size: 48rpx;
+  font-weight: Bold;
+  color: white;
+  float: left;
+  height: 60rpx;
+  display: block;
+  z-index: 900;
+  font-family: PingFang-SC-Bold;
+}
+
+.map_panel_btn3 {
+  width: 100%;
+  margin: 0 auto;
+  /* padding-top: 10rpx; */
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: Bold;
+  color: white;
+  float: left;
+  height: 60rpx;
+  display: block;
+  z-index: 900;
+  font-family: PingFang-SC-Bold;
+}
+
+.map_panel_btn2 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 26rpx;
+  color: white;
+  height: 100rpx;
+  float: left;
+  display: block;
+  overflow: hidden;
+  z-index: 900;
+  font-family: PingFang-SC-Regular;
+  font-weight: Regular;
+  margin-top: 10rpx;
+}
+
+.map_panel_btn4 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 26rpx;
+  color: white;
+  height: 100rpx;
+  float: left;
+  display: block;
+  overflow: hidden;
+  z-index: 900;
+  font-family: PingFang-SC-Regular;
+  font-weight: Regular;
+  /* margin-top: 10rpx; */
+}
+
+.userinfo-avatar {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 40rpx;
+  margin-top: 14rpx;
+  border-radius: 50%;
+  float: left;
+}
+
+.map_panel_img1 {
+  display: block;
+  height: 68rpx;
+  position: absolute;
+  top: 20rpx;
+  z-index: 900;
+  background-color: white;
+  width: 94%;
+  margin: 0 auto;
+  /* margin-left: 20rpx; */
+  border-radius: 60rpx;
+  margin-left: 3%;
+}
+
+.map_panel_img1_text2 {
+  width: 56rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  font-weight: Regular;
+  float: right;
+  margin-right: 100rpx;
+  font-family: PingFang-SC-Regular;
+  /* padding-left:50px; *//* position: fixed; *//* display: flex; */
+}
+
+.singnal_view {
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-right: -110rpx;
+  float: right;
+}
+
+.map_panel_weilan {
+  width: 224rpx;
+  margin-top: 120rpx;
+  float: right;
+  background-color: white;
+  border-radius: 32rpx;
+  line-height: 68rpx;
+  height: 68rpx;
+  font-size: 26rpx;
+  font-weight: 900;
+  margin-right: 3%;
+}
+
+.map_panel_weilan_text {
+  width: 140rpx;
+  float: left;
+  height: 68rpx;
+  line-height: 68rpx;
+  text-align: center;
+}
+
+.checkbtn {
+  width: 74rpx;
+  height: 52rpx;
+  margin-top: 8rpx;
+  float: right;
+  margin-right: 10rpx;
+}
+
+.weilan {
+  width: 270rpx;
+  float: right;
+  background-color: white;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: 900;
+  font-size: 30rpx;
+  text-align: center;
+  border-radius: 60rpx;
+  margin-top: 20rpx;
+}
+
+.weilan switch {
+  float: right;
+  color: #ff9901;
+}
+
+.progress {
+  width: 100rpx;
+  left: 45%;
+  border-radius: 12rpx;
+  margin-top: 23rpx;
+  float: left;
+  height: 22rpx;
+  border: 1px solid #fffeee;
+  background-color: #efefef;
+  background-size: 10rpx, 20rpx;
+  position: fixed;
+}
+
+.voltage_text {
+  font-size: 20rpx;
+  text-align: center;
+  left: 60%;
+  width: 40rpx;
+  margin-top: 23rpx;
+  float: left;
+  height: 22rpx;
+  position: fixed;
+}
+
+.progress_inner {
+  /* border-radius: 60rpx; *//* float: left; */
+  height: 22rpx;
+  border: 1px solid #fffeee;
+  background-color: #32e11a;
+  text-align: center;
+  font-size: 20rpx;
+  border-radius:50rpx;
+}
+
+.map_panel_img1_text1 {
+  height: 68rpx;
+  width: 200rpx;
+  line-height: 68rpx;
+  font-size: 26rpx;
+  font-weight: 500;
+  float: left;
+  margin-left: 10rpx;
+  overflow: hidden;
+  font-family: PingFang-SC-Medium;
+}
+
+.map_panel_img1_text3 {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  font-weight: 900;
+  float: right;
+}
+
+.map_panel_img1_progress1 {
+  float: left;
+}
+
+.map_panel_nav1 {
+  width: 90%;
+  margin: 0 auto;
+  height: 80rpx;
+  /* margin-top:20px; */
+  z-index: 900;
+  background-color: white;
+  border-radius: 60rpx;
+}
+
+.floatbtn1 {
+  width: 150rpx;
+  height: 150rpx;
+  left: 5%;
+  position: fixed;
+  bottom: 165rpx;
+  z-index: 999;
+}
+
+.floatbtn2 {
+  width: 150rpx;
+  height: 150rpx;
+  left: 27%;
+  position: fixed;
+  bottom: 245rpx;
+  z-index: 999;
+}
+
+.floatbtn3 {
+  width: 150rpx;
+  height: 150rpx;
+  left: 50%;
+  position: fixed;
+  bottom: 245rpx;
+  z-index: 999;
+}
+
+.floatbtn4 {
+  width: 150rpx;
+  height: 150rpx;
+  left: 70%;
+  position: fixed;
+  bottom: 165rpx;
+  z-index: 999;
+}
+
+.floatbtn5 {
+  width: 52rpx;
+  height: 52rpx;
+  margin: 0 auto;
+}

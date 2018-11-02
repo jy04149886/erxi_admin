@@ -1,0 +1,39 @@
+/**index.wxss**/
+.userinfo {
+   display: inline-block; 
+  flex-direction: column;
+  align-items: center;
+  height: 80rpx;
+  width:90%;
+  margin: 0 auto;
+}
+
+.rexian{
+  width:50%;
+  height: 160rpx;
+  background-color: #EFEFF4;
+  margin: 60rpx auto;
+}
+
+.rexian text{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20rpx;
+  text-align: center;
+  display: block;
+}
+
+.shuoming{
+  width: 85%;
+  margin: 0 auto;
+  display: block;
+}
+
+.shuoming text{
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  float: left;
+  font-size: 26rpx;
+  color: #B1B1B1;
+}

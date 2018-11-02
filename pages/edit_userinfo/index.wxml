@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container" style='width:90%;margin:0 auto;'>
+  <view class="userinfo">
+    <text class="userinfo-text1">更换头像</text>
+    <navigator class='userinfo-nav1'><image class="userinfo-img1" src="{{Path}}"></image></navigator>
+    
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  </view>
+  <view class="_line"></view>
+  <view class="userinfo" bindtap='gotoeditnickname'>
+    <text class="userinfo-text1">昵称</text>
+    <image class="userinfo-img1" src="{{Path}}"></image>
+    <text class="userinfo-text2">{{userInfo.nickName}}</text>
+  </view>
+  <view class="_line"></view>
+</view>

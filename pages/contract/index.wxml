@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <view class='rexian'>
+      <text>客服热线：</text>
+      <text class="" style="color:#FF6500;font-weight:500;text-decoration:underline">0755-820880</text>
+    </view>
+    <view class="shuoming">
+    <text class="" style="">服务时间:8:00-22:00</text>
+    <text class="" style="">如果您有任何疑问,请于服务时间内拨打客服热线</text>
+    <text class="" style="">我们将竭诚为您服务。</text>
+    </view>
+      
+  </view>
+</view>

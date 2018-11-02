@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<!-- <import src="/zanui-weapp-dev/dist/field/index.wxml" /> -->
+<view class="container pagestyle" style=''>
+
+  <view class="zan-panel" style="width:90%;">
+    <view class="form_input">
+      <label>输入密码</label>
+      <input type='password' bindinput='listenpassword'></input>
+    </view>
+    <view class="form_subbtn">
+      <button type="default" bindtap='submiteditpass' class="subbtn" size="default" style='background-color: #FF6500;color:white;width:100%'>确定</button>
+    </view>
+  </view>
+
+</view>
+
+<view class="zan-popup {{ showPopup ? 'zan-popup--show' : ''}}">
+  <view class="zan-popup__mask" bindtap="togglePopup"></view>
+  <view class="zan-popup__container popup-example--center">
+    <view class="zan-btns">
+      <button class="zan-btn" bindtap="closePopup">
+        {{login_msg}}
+      </button>
+    </view>
+  </view>
+</view>

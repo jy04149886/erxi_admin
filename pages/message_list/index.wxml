@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{news}}" background-size="cover"></image>
+      <text class="userinfo-nickname" style="color:#000;font-weight:800">温馨提醒:</text>
+      <text class="userinfo-nickname" style='color:#929292'>消息内容.......</text>
+  </view>
+</view>

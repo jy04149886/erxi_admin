@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/home/index",
+    "pages/usercenter/index",
+    "pages/setEnclosure/index",
+    "pages/login/index",
+    "pages/regist/index",
+    "pages/no_device/index",
+    "pages/service_pay_detail/index",
+    "pages/item_detail/index",
+    "pages/edit_device_info/index",
+    "pages/edit_password/index",
+    "pages/forgetpassword/index",
+    "pages/bind_mobile/index",
+    "pages/bind_device/index",
+    "pages/account_edit/index",
+    "pages/contract/index",
+    "pages/problem/index",
+    "pages/message_list/index",
+    "pages/service_pay/index",
+    "pages/edit_userinfo/index",
+    "pages/edit_device_name/index",
+    "pages/edit_pet_age/index",
+    "pages/edit_pet_sex/index",
+    "pages/edit_pet_varieties/index",
+    "pages/logs/logs",
+    "pages/disbind/index"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

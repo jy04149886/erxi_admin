@@ -1,0 +1,71 @@
+.userinfo {
+  display: block;
+  /* flex-direction: column; */
+  align-items: center;
+  width: 100%;
+  line-height: 90rpx;
+  height: 90rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  /* margin: 20rpx; */
+  border-radius: 50%;
+   float: right; 
+    margin-right: 20rpx;  
+  /* margin:0 auto; */
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 400rpx;
+}
+
+.userinfo-text1 {
+  /* height: 100px; */
+  margin: 0 auto;
+  display: block;
+  float: left;
+  font-family: "PingFang-SC-Medium";
+  font-weight: Medium;
+  font-size: 34rpx;
+}
+
+.userinfo-text2 {
+  /* height: 100px; */
+  margin: 0 auto;
+  display: block;
+  float: right;
+  color: #BEBEBE;
+  margin-right: 20rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: Medium;
+  font-size: 34rpx;
+}
+
+.userinfo-nav1 {
+  float: right;
+  display: block;
+  /* margin-right:0;  */
+  margin: 0 auto;
+}
+
+.userinfo-img1 {
+  width: 16rpx;
+  height: 26rpx;
+  line-height: 90rpx;
+   margin-top:32rpx; 
+  float: right
+}
+
+._line{
+  width: 100%;
+  margin: 0 auto;
+  height:2rpx;
+  background-color: #E5E5E5;
+  /* margin-top: 20rpx; */
+}
