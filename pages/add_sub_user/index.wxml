@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<!-- <import src="/zanui-weapp-dev/dist/field/index.wxml" /> -->
+<view class="container">
+  <view class="userinfo" style='padding-top:20px'>
+    <image src='{{mine_add}}' style='width:25px;margin:0 auto;height:25px' class="userinfo-avatar"></image>
+    <text style='font-size:30px;font-weight:900;'>添加监护账号</text>
+  </view>
+  <view class="userinfo" style='padding-top:20px;width:80%'>
+    <text style='font-size:16px;font-weight:400;text-align:center'>添加前请先让家庭成员在“安帕奇宠物定位”小程序上注册账号否则无法添加成功</text>
+  </view>
+
+  <!-- <view class="zan-panel-title">基础用法</view> -->
+  <!-- <view class="userinfo" style="padding-top:20px">
+    <block>
+      <image src='{{bound}}' style='width:200px;margin:0 auto;height:100px' class="userinfo-avatar"></image>
+    </block>
+  </view> -->
+
+  <view class="form_input">
+    <input bindinput='inputmobile' placeholder="输入监护人手机号" style='width:350rpx' 
+    value='{{mobile}}' />
+    <button bindtap='bindDevice' type="default" size="default">确定</button>
+  </view>
+
+  <!-- <view class="form_subbtn">
+    <button type="default" bindtap='scanercode' class="subbtn" size="default" style='background-color: #FF6500;color:white;width:100%;height:50px'>扫码绑定</button>
+  </view> -->
+
+  <view style="margin-top:30rpx;width:80%">
+    <view>
+      <view class='mobile_column'>当前监护成员</view>
+      <view class='oprate_column'>解除</view>
+    </view>
+    <view wx:for="{{devicelist}}" wx:key="{{item}}" style='margin-top:70rpx'>
+      <view class='mobile_column'>{{item.mobile}}</view>
+      <view class='oprate_column'>
+        <image src='{{jiechujianhuren}}' style='width:50rpx;margin:0 auto;height:50rpx' class="userinfo-avatar" bindtap='unbindSubuser' data-item='{{item}}'></image>
+      </view>
+    </view>
+  </view>
+</view>

@@ -11,7 +11,7 @@ Page({
     location_equ: "/pages/images/location_equ" + imageSize + ".png",
     location_equ: "/pages/images/location_equ" + imageSize + ".png",
   },
-  onLoad: function(option) {
+  onLoad: function (option) {
     device_id = option.d_id
     try {
       userid = wx.getStorageSync('userid')
@@ -28,7 +28,7 @@ Page({
       header: {
         'content-type': 'application/json' // 默认值
       },
-      success: function(res) {
+      success: function (res) {
         var text_number = res.data.text_number
         imei = res.data.imei
         _that.setData({
@@ -63,20 +63,20 @@ Page({
 
 
   },
-  getUserInfo: function(e) {
+  getUserInfo: function (e) {
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
   },
-  editinfobtn: function() {
+  editinfobtn: function () {
     wx.navigateTo({
       url: '/pages/edit_device_info/index?device_id=' + device_id
     })
   },
 
-  listenSetrange: function(e) {
+  listenSetrange: function (e) {
     var range = e.detail.value
     wx.request({
       url: 'https://www.ju2xi.com/user/profile/setEnclosureRange',
@@ -87,35 +87,35 @@ Page({
       header: {
         'content-type': 'application/json' // 默认值
       },
-      success: function(res) {
+      success: function (res) {
         console.log(res.data)
       }
     })
   },
 
-  unbinddevice: function() {
+  unbinddevice: function () {
     wx.showModal({
       title: '提示',
       content: '确定解除绑定',
-      success: function(res) {
+      success: function (res) {
         if (res.confirm) {
           wx.request({
             url: 'https://www.ju2xi.com/user/profile/unbindDevice',
             data: {
-              device_id: device_id,
+              imei: imei,
               uid: userid
             },
             header: {
               'content-type': 'application/json' // 默认值
             },
-            success: function(res) {
+            success: function (res) {
               if (res.data.status) {
                 wx.showToast({
                   title: res.data.msg,
                   icon: 'none',
                   duration: 2000
                 })
-                setTimeout(function() {
+                setTimeout(function () {
                   // wx.redirectTo({
                   //   url: '/pages/usercenter/index'
                   // })
@@ -123,6 +123,12 @@ Page({
                     delta: 1
                   })
                 }, 2000);
+              } else {
+                wx.showToast({
+                  title: res.data.msg,
+                  icon: 'none',
+                  duration: 2000
+                })
               }
             }
           })
@@ -133,21 +139,28 @@ Page({
     })
   },
 
-  listenCharg: function(e) {
+  listenCharg: function (e) {
     var d_id = e.currentTarget.dataset.value
     wx.navigateTo({
       url: '/pages/service_pay_detail/index?id=' + d_id
     })
   },
 
-  listenEnclosure: function(e) {
+  listenSubuser: function (e) {
+    var d_id = e.target.dataset.value
+    wx.navigateTo({
+      url: "/pages/add_sub_user/index?userid=" + userid + "&imei=" + imei
+    })
+  },
+
+  listenEnclosure: function (e) {
     var d_id = e.target.dataset.value
     wx.navigateTo({
       url: "/pages/setEnclosure/index?device_id=" + d_id
     })
   },
 
-  poweroffListener: function() {
+  poweroffListener: function () {
     wx.request({
       url: 'https://www.ju2xi.com/user/profile/setCommand',
       data: {
@@ -157,7 +170,7 @@ Page({
       header: {
         'content-type': 'application/json' // 默认值
       },
-      success: function(res) {
+      success: function (res) {
         wx.showToast({
           title: '操作成功',
           icon: 'success',
@@ -167,7 +180,7 @@ Page({
     })
   },
 
-  uploadaudioListener: function() {
+  uploadaudioListener: function () {
     const recorderManager = wx.getRecorderManager()
 
     recorderManager.onStart(() => {
@@ -188,8 +201,8 @@ Page({
         formData: {
           imei: imei
         },
-        success: function(res) {
-          if (res.data.indexOf('ok')>-1) {
+        success: function (res) {
+          if (res.data.indexOf('ok') > -1) {
             wx.showToast({
               title: '上传成功',
               icon: 'success',

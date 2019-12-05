@@ -4,7 +4,7 @@ var userid = undefined
 
 Page(Object.assign({
   data: {
-    equ: '/pages/images/equ' + imageSize + '.png',
+    equ: '/pages/images/location_equ' + imageSize + '.png',
   },
   onLoad: function () {
     userid = wx.getStorageSync('userid')

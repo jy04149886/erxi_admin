@@ -31,8 +31,8 @@
 }
 
 .info_view1 {
-  width: 90%;
-  /* height: 50rpx; */
+  width: 100%;
+  height: 60rpx;
   margin: 0 auto;
   display: flex;
   /* margin-top: 20rpx; */
@@ -54,13 +54,15 @@
   /* margin-left:20%;  */
   text-align: center;
   width: 50%;
+  /* height: 100rpx; */
   font-family: "PingFang-SC-Medium";
   font-weight: Medium;
-  font-size: 28rpx;
+  font-size: 40rpx;
 }
 
 .info_view2 {
-  width: 90%;
+  width: 100%;
+  height: 60rpx;
   /* height: 50rpx; */
   margin: 0 auto;
   display: flex;
@@ -153,7 +155,7 @@
 .rowstyle {
   height: 100rpx;
   display: block;
-  background-color: #efeff4;
+  /* background-color: #efeff4; */
   width: 100%;
   margin: 0 auto;
 }
@@ -204,7 +206,7 @@
 
 .pagestyle {
   /* background-color: #efeff4; */
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .radio-group {

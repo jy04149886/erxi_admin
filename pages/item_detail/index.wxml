@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="container pagestyle" style='height:{{windowHeight*0.4}}px'>
+<view class="container pagestyle" style='height:{{windowHeight*0.45}}px'>
   <view class="userinfo">
     <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatar}}" background-size="cover"></image>
     <text class="userinfo-nickname">{{device_name}}</text>
@@ -20,6 +20,9 @@
     <button bindtap='listenEnclosure' data-value="{{device_id}}">设置围栏范围</button>
   </view>
 
+  <view class="rowstyle" style=''>
+    <button bindtap='listenSubuser' data-value="{{device_id}}">添加监护人</button>
+  </view>
 
   <!-- <view class="rowstyle" style=''>
     <text>设置围栏范围</text>
@@ -31,15 +34,15 @@
     <slider value="{{range}}" bindchange="listenSetrange" min="0" max="1000" show-value selected-color="#FF6500" block-color="#FF9A01" />
   </view> -->
 </view>
-<view class="textBtn" style='height:{{windowHeight*0.6}}px'>
-  <view>请注意！电子围栏功能开启后，设备耗电量加大，待机时间缩短。设备将以十分钟一次的频率定位，检测宠物是否您划定的范围内。请慎重使用该功能！</view>
-  <button class="unbindbtn" bindtap='uploadaudioListener' style='bottom:300rpx'>
+<view class="textBtn" style='height:{{windowHeight*0.55}}px'>
+  <!-- <view>请注意！电子围栏功能开启后，设备耗电量加大，待机时间缩短。设备将以十分钟一次的频率定位，检测宠物是否您划定的范围内。请慎重使用该功能！</view> -->
+  <!-- <button class="unbindbtn" bindtap='uploadaudioListener' style='bottom:300rpx'>
     <text style='color:#fff'>上传音频</text>
-  </button>
+  </button> -->
   <button class="unbindbtn" bindtap='poweroffListener' style='bottom:180rpx'>
     <text style='color:#fff'>远程关机</text>
   </button>
   <button class="unbindbtn" bindtap='unbinddevice'>
-    <text style='color:#fff'>绑定解除</text>
+    <text style='color:#fff'>解除绑定</text>
   </button>
 </view>

@@ -6,7 +6,7 @@
       <label class="radio">
         <view class="itemcard">
           <view class="itemcardrow1">
-            <text class="itemcardrow1_text1">{{device_detail.device_name}}的设备SIM</text>
+            <text class="itemcardrow1_text1">{{device_detail.device_name}}的设备</text>
             <!-- <radio class="item_checkbox" value="1" checked="1" color="#FF9600" style='' /> -->
           </view>
           <!-- <view class="itemcardrow2">
@@ -14,11 +14,11 @@
             <text style='font-size:40rpx' class="itemcardrow2_text3">{{device_detail.text_number}}</text>
           </view> -->
           <view class="itemcardrow2">
-            <text class="itemcardrow2_text1">激活时间</text>
+            <text class="itemcardrow2_text1">首次激活时间 :</text>
             <text class="itemcardrow2_text3">{{device_detail.start_time}}</text>
           </view>
           <view class="itemcardrow2">
-            <text class="itemcardrow2_text1">会员到期时间</text>
+            <text class="itemcardrow2_text1">会员到期时间 :</text>
             <text class="itemcardrow2_text3">{{device_detail.end_time}}</text>
           </view>
           <!-- <view class="itemcardrow2">
@@ -36,8 +36,8 @@
           <text>SIM卡流量续费</text>
           <view wx:for="{{gpslist}}" wx:key="{{item}}">
             <view class="price_view" bindtap='startpay' data-price="{{item.price}}" data-itemid="{{item.id}}">
-              <text>{{item.price}}元/年</text>
-              <text style='font-weight:Medium;font-size:28rpx;color:#999999'>{{item.specifi}}</text>
+              <text>{{item.name}}</text>
+              <text style='font-weight:Medium;font-size:28rpx;color:#999999'>{{item.explain}}</text>
             </view>
           </view>
         </view>

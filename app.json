@@ -1,14 +1,16 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/home/index",
     "pages/usercenter/index",
     "pages/setEnclosure/index",
+    "pages/add_sub_user/index",
     "pages/login/index",
     "pages/regist/index",
     "pages/no_device/index",
     "pages/service_pay_detail/index",
     "pages/item_detail/index",
+    "pages/item_detail_sub/index",
     "pages/edit_device_info/index",
     "pages/edit_password/index",
     "pages/forgetpassword/index",
@@ -26,12 +28,17 @@
     "pages/edit_pet_varieties/index",
     "pages/logs/logs",
     "pages/disbind/index"
-    
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "设备位置的文字说明"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -4,7 +4,7 @@
   <!-- <view class="zan-panel-title">基础用法</view> -->
   <view class="userinfo" style="padding-top:20px">
     <block>
-      <image src='{{equ}}' style='width:168rpx;margin:0 auto;height:320rpx' class="userinfo-avatar"></image>
+      <image src='{{equ}}' style='width:168rpx;margin:0 auto;height:168rpx' class="userinfo-avatar"></image>
     </block>
   </view>
 <view class="container">

@@ -3,7 +3,6 @@
    display: inline-block; 
   flex-direction: column;
   align-items: center;
-  height: 100rpx;
   width:90%;
   margin: 0 auto;
 }
@@ -19,13 +18,20 @@
   margin: 30rpx auto;
 }
 
-.userinfo-nickname {
+.a {
   color: #aaa;
   float: left;
   display: block;
-  line-height: 60rpx;
-  height: 60rpx;
-  width: 75%;
+  width: 10%;
+  margin:20rpx auto;
+  font-size:40rpx;
+}
+
+.b {
+  color: #aaa;
+  float: left;
+  display: block;
+  width: 90%;
   margin:20rpx auto;
   font-size:40rpx;
 }

@@ -1,28 +1,64 @@
 <!--index.wxml-->
 <view class="container">
   <view class="userinfo" bindtap="bindViewTap">
-      <text class="userinfo-nickname" style="color:#000;font-weight:500">资费问题:</text>
-      <image class="userinfo-avatar" src="{{Path}}" background-size="cover"></image>
+    <text class="a" style="color:red;font-weight:500;">Q </text>
+    <text class="b" style="color:#000;font-weight:500">如何开机？</text>
   </view>
-  <view class='_line'></view>
   <view class="userinfo" bindtap="bindViewTap">
-      <text class="userinfo-nickname" style="color:#000;font-weight:500">余额处理:</text>
-      <image class="userinfo-avatar" src="{{Path}}" background-size="cover"></image>
+    <text class="a" style="color:green;font-weight:500;">A </text>
+    <text class="b" style="color:#000;font-weight:500;margin-top:-18px">
+        开机有两种方式
+        1:接通电源一分钟自动开机；
+        2：长按电源键3秒，设备亮白灯表示开机成功。  
+      </text>
   </view>
-  <view class='_line'></view>
+
   <view class="userinfo" bindtap="bindViewTap">
-      <text class="userinfo-nickname" style="color:#000;font-weight:500">连接异常:</text>
-      <image class="userinfo-avatar" src="{{Path}}" background-size="cover"></image>
+    <text class="a" style="color:red;font-weight:500;">Q </text>
+    <text class="b" style="color:#000;font-weight:500">如何判断定位器当前状态？</text>
   </view>
-  <view class='_line'></view>
   <view class="userinfo" bindtap="bindViewTap">
-      <text class="userinfo-nickname" style="color:#000;font-weight:500">其他问题:</text>
-      <image class="userinfo-avatar" src="{{Path}}" background-size="cover"></image>
+    <text class="a" style="color:green;font-weight:500;">A </text>
+    <text class="b" style="color:#000;font-weight:500;margin-top:-18px">
+        点按电源键,（1）不亮灯为关机或没电;(2）亮白灯,表示联网定位中;（2）亮红灯，表示省电模式;
+      </text>
   </view>
-  <view class='_line'></view>
+
+
   <view class="userinfo" bindtap="bindViewTap">
-      <text class="userinfo-nickname" style="color:#000;font-weight:500">联系我们:</text>
-      <image class="userinfo-avatar" src="{{Path}}" background-size="cover"></image>
+    <text class="a" style="color:red;font-weight:500;">Q </text>
+    <text class="b" style="color:#000;font-weight:500">开启夜巡灯功能后，为什么会自动关闭？</text>
   </view>
-  <view class='_line'></view>
+  <view class="userinfo" bindtap="bindViewTap">
+    <text class="a" style="color:green;font-weight:500;">A </text>
+    <text class="b" style="color:#000;font-weight:500;margin-top:-18px">
+        当设备进入休眠后，灯光会自动熄灭，进入省电状态。
+      </text>
+  </view>
+
+  <view class="userinfo" bindtap="bindViewTap">
+    <text class="a" style="color:red;font-weight:500;">Q </text>
+    <text class="b" style="color:#000;font-weight:500;margin-top:-18px">
+        如何判断充电时的电量情况？
+      </text>
+  </view>
+  <view class="userinfo" bindtap="bindViewTap">
+    <text class="a" style="color:green;font-weight:500;">A </text>
+    <text class="b" style="color:#000;font-weight:500;margin-top:-18px">
+        接通电源后,红灯常亮表示充电中，白等常亮表示已充满。
+      </text>
+  </view>
+
+  <view class="userinfo" bindtap="bindViewTap">
+    <text class="a" style="color:red;font-weight:500;">Q </text>
+    <text class="b" style="color:#000;font-weight:500;margin-top:-18px">
+        续费充值时是什么意思？
+      </text>
+  </view>
+  <view class="userinfo" bindtap="bindViewTap">
+    <text class="a" style="color:green;font-weight:500;">A </text>
+    <text class="b" style="color:#000;font-weight:500;margin-top:-18px">
+        定位器获取到位置数据之后，需要通过网络将数据发送给手机，因此就会消耗到流量。当流量用尽时，请及时充值,确保定位正常联网。每次充值的流量在有效期里为无限量使用。
+      </text>
+  </view>
 </view>

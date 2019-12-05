@@ -92,7 +92,7 @@ Page(Object.assign({
                           duration: 2000
                         })
                         wx.redirectTo({
-                          url: '/pages/no_device/index'
+                          url: '/pages/usercenter/index'
                         })
                         return false
                       } else {
@@ -120,9 +120,6 @@ Page(Object.assign({
 
   registUser(openid, userInfo, unionid) {
     var _that = this
-    // wx.getUserInfo({
-    //   success: function (res) {
-    // var userInfo = res.userInfo
     var nickName = userInfo.nickName
     var avatarUrl = userInfo.avatarUrl
     var gender = userInfo.gender //性别 0：未知、1：男、2：女
@@ -154,11 +151,6 @@ Page(Object.assign({
         _that.weixindl()
       }
     })
-    //       },
-    //       fail:function(res){
-    // console.log(res)
-    //       }
-    //     })
   },
 
   mimalogin: function() {
@@ -181,88 +173,89 @@ Page(Object.assign({
       })
       return false
     }
-    wx.request({
-      url: 'https://www.ju2xi.com/user/login/doLogin',
-      method: 'POST',
-      data: {
-        username: username,
-        password: password,
-        reg_type: 2
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function(res) {
-        if (res.data.status) {
-          wx.setStorage({
-            key: "login_type",
-            data: "mm"
-          })
-          var user = res.data.data;
-          var userid = user.id
-          wx.setStorageSync("user_token", user.token)
-          wx.setStorageSync("user_info", user)
-          wx.setStorageSync("openid", user.openid)
-          wx.setStorageSync("userid", user.id)
-          wx.showToast({
-            title: "登陆成功",
-            icon: 'none',
-            duration: 2000
-          })
-          var user = res.data.data
-          if (!user.user_pass) {
-            wx.navigateTo({
-              url: '/pages/edit_password/index'
-            })
-            return false
-          }
-          // if (!user.openid) {
-          //   wx.redirectTo({
-          //     url: '/pages/account_edit/index'
-          //   })
-          //   return false
-          // }
-          // wx.redirectTo({
-          //   url: '/pages/home/index'
-          // })
-          wx.request({
-            url: 'https://www.ju2xi.com/user/profile/getuserdevicelist',
-            data: {
-              userid: userid
-            },
-            header: {
-              'content-type': 'application/json' // 默认值
-            },
-            success: function(res) {
-              var device_last = res.data.device_last
-              if (!device_last) {
-                wx.showToast({
-                  title: '请选择当前设备',
-                  icon: 'success',
-                  duration: 2000
-                })
-                wx.redirectTo({
-                  url: '/pages/no_device/index'
-                })
-                return false
-              } else {
-                wx.redirectTo({
-                  url: '/pages/home/index'
+    wx.login({
+      success: function (res) {
+        wx.showLoading({
+          title: '加载中',
+        })
+        wx.request({
+          url: 'https://www.ju2xi.com/user/login/doLogin',
+          method: 'POST',
+          data: {
+            username: username,
+            password: password,
+            reg_type: 2,
+            code: res.code
+          },
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success: function (res) {
+            wx.hideLoading()
+            if (res.data.status) {
+              wx.setStorage({
+                key: "login_type",
+                data: "mm"
+              })
+              var user = res.data.data;
+              var userid = user.id
+              wx.setStorageSync("user_token", user.token)
+              wx.setStorageSync("user_info", user)
+              wx.setStorageSync("openid", user.openid)
+              wx.setStorageSync("userid", user.id)
+              wx.showToast({
+                title: "登陆成功",
+                icon: 'none',
+                duration: 2000
+              })
+              var user = res.data.data
+              if (!user.user_pass) {
+                wx.navigateTo({
+                  url: '/pages/edit_password/index'
                 })
                 return false
               }
+              wx.request({
+                url: 'https://www.ju2xi.com/user/profile/getuserdevicelist',
+                data: {
+                  userid: userid
+                },
+                header: {
+                  'content-type': 'application/json' // 默认值
+                },
+                success: function (res) {
+                  var device_last = res.data.device_last
+                  if (!device_last) {
+                    wx.showToast({
+                      title: '请选择当前设备',
+                      icon: 'success',
+                      duration: 2000
+                    })
+                    wx.redirectTo({
+                      url: '/pages/usercenter/index'
+                    })
+                    return false
+                  } else {
+                    wx.redirectTo({
+                      url: '/pages/home/index'
+                    })
+                    return false
+                  }
+                }
+              })
+              return false
+            } else {
+              wx.showToast({
+                title: res.data.msg,
+                icon: 'none',
+                duration: 2000
+              })
             }
-          })
-          return false
-        } else {
-          wx.showToast({
-            title: res.data.msg,
-            icon: 'none',
-            duration: 2000
-          })
-        }
+          }
+        })
       }
     })
+    
   },
 
   listenerPhoneInput: function(e) {

@@ -88,7 +88,7 @@
 .itemcardrow1 {
   height: 60rpx;
   line-height: 60rpx;
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
   text-indent: center;
   padding-top: 20rpx;
@@ -149,7 +149,7 @@
   display: block;
   float: left;
   font-size: 30rpx;
-   width:30%; 
+   /* width:35%;  */
 }
 
 .itemcardrow2_text2 {
@@ -169,8 +169,8 @@
   display: block;
   float: left;
   font-size: 30rpx;
-  width:20%;
-  margin-left: 40rpx;
+  /* width:20%; */
+  margin-left: 10rpx;
   /* text-align: center; */
 }
 

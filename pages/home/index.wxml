@@ -2,69 +2,91 @@
 <!-- <import src="/zanui-weapp-dev/dist/switch/index.wxml" /> -->
 
 
-<map id="map" longitude="{{location.longitude}}" latitude="{{location.latitude}}" scale="18" bindcontroltap="controltap" polyline="{{polyline}}" markers="{{markers}}" circles="{{circles}}" bindmarkertap="markertap" bindregionchange="regionchange" show-location
+<map id="map" longitude="{{location.longitude}}" latitude="{{location.latitude}}" scale="21" bindcontroltap="controltap" polyline="{{polyline}}" markers="{{markers}}" circles="{{circles}}" bindmarkertap="markertap" bindregionchange="regionchange" show-location
   style="width: 100%; height: {{screen_height}}px;">
 
   <!-- style='width:{{screen_width}}px' -->
 
   <cover-view class="map_panel_img1">
-    <cover-image bindtap="bindViewTap" class="userinfo-avatar" src="{{device_last.avatar?device_last.avatar:head_mine}}" background-size="cover"></cover-image>
+    <!-- <cover-image bindtap="bindViewTap" class="userinfo-avatar" src="{{device_last.avatar?device_last.avatar:head_mine}}" background-size="cover"></cover-image>
     <cover-view class="map_panel_img1_text1" style=''>{{device_last.device_name}}</cover-view>
-     <cover-view class='progress' style=''>
+    <cover-view class='progress' style=''>
       <cover-view class='progress_inner' style='width: {{voltage}}rpx;'></cover-view>
-    </cover-view> 
-     <!-- <progress percent="{{voltage}}"  class='progress' style=""/>  -->
-    <cover-view style='' class="voltage_text">
+    </cover-view> -->
+    <!-- <progress percent="{{voltage}}"  class='progress' style=""/>  -->
+    <cover-view class="off_line_text">{{device_state_text}}</cover-view>
+    <cover-view style='' class="dingweipinlv">
+      {{device_locate_text}}
+    </cover-view>
+    <cover-view style='' class="voltage_text_desc">
+      电量
+    </cover-view>
+    <cover-view style='color: {{voltage_color}};' class="voltage_text">
       {{voltage}}%
     </cover-view>
-    <cover-view class="map_panel_img1_text2" style=''>{{is_gps}}
-    </cover-view>
-    <cover-view class='singnal_view' style=''>
-      <cover-view class="singnal_point" style='{{signal_point1}}'></cover-view>
-      <cover-view class="singnal_point" style='{{signal_point2}}'></cover-view>
-      <cover-view class="singnal_point" style='{{signal_point3}}'></cover-view>
-    </cover-view>
+    <!--<cover-view class="off_line_text" wx:if="{{is_device_online}}">
+       <cover-view class="map_panel_img1_text2" style=''>{{is_gps}}
+      </cover-view>
+      <cover-view class='singnal_view' style=''>
+        <cover-view class="singnal_point" style='{{signal_point1}}'></cover-view>
+        <cover-view class="singnal_point" style='{{signal_point2}}'></cover-view>
+        <cover-view class="singnal_point" style='{{signal_point3}}'></cover-view>
+      </cover-view>
+      在线
+    </cover-view> -->
   </cover-view>
   <cover-view class='map_panel_weilan'>
-    <cover-view class='map_panel_weilan_text'>电子围栏</cover-view>
+    <cover-view class='map_panel_weilan_text'>围栏</cover-view>
     <cover-image class='checkbtn' checked bindtap="switch1Change" src='{{isHome_switch}}' value="{{isHome}}"></cover-image>
   </cover-view>
 
-  <cover-image bindtap='listengohome' src='{{img_mine}}' class='floatbtn1'></cover-image>
-  <cover-image bindtap='listenlight' src='{{torch_nor}}' class='floatbtn2'></cover-image>
-  <cover-image bindtap='listenbuzzer' src='{{buzzer_nor}}' class='floatbtn3'></cover-image>
-  <cover-image bindtap='listenlocation' src='{{location_nor}}' class='floatbtn4'></cover-image>
-  <cover-image class="map_panel" style='display:{{start_follow}}' src="{{btn1}}">
+
+
+  <cover-view class='map_panel_light'>
+    <cover-view class='map_panel_weilan_text'>灯光</cover-view>
+    <cover-image bindtap='listenlight' src='{{torch_nor}}' class='floatbtn2'></cover-image>
+  </cover-view>
+
+  <cover-view class='map_panel_location'>
+    <cover-view class='map_panel_weilan_text'>轨迹</cover-view>
+    <cover-image bindtap='listenlocation' src='{{location_switch}}' class='floatbtn4'></cover-image>
+  </cover-view>
+
+  <!-- <cover-view class='floatview1'> -->
+    <cover-image bindtap='listengohome' src='{{img_mine}}' class='floatview1'></cover-image>
+  <!-- </cover-view> -->
+  <!-- <cover-image bindtap='listenbuzzer' src='{{buzzer_nor}}' class='floatbtn3'></cover-image> -->
+  <cover-image class="map_panel" style='display:{{start_follow}};margin-left: {{marginLeft}}px;' src="{{btn1}}" bindtap='listen_start_follow'>
   </cover-image>
-  <cover-view class="map_panel" style='display:{{start_follow}};bottom:-60rpx' bindtap='listen_start_follow'>
-    <cover-view class="map_panel_btn1" style=''>
-      开启追踪模式
-    </cover-view>
-    <cover-view class="map_panel_btn2" style=''>
+  <!-- <cover-view class="map_panel" style='display:{{start_follow}};bottom:-40rpx;margin-left: {{marginLeft}}px;' bindtap='listen_start_follow'> -->
+    <!-- <cover-view class="map_panel_btn1" style=''>
+      开启追踪
+    </cover-view> -->
+    <!-- <cover-view class="map_panel_btn2" style=''>
       当前为省电模式 仅打开程序时定位
-    </cover-view>
-  </cover-view>
+    </cover-view> -->
+  <!-- </cover-view> -->
 
-  <cover-image class="map_panel1" style='display:{{loading_follow}}' src="{{btn1}}">
+  <cover-image class="map_panel" style='display:{{loading_follow}};margin-left: {{marginLeft}}px;' src="{{btn3}}">
   </cover-image>
-  <cover-view class="map_panel1" style='display:{{loading_follow}};bottom:-60rpx'>
-    <cover-view class="map_panel_btn3" style=''>
+  <!-- <cover-view class="map_panel" style='display:{{loading_follow}};bottom:-40rpx;margin-left: {{marginLeft}}px;'> -->
+    <!-- <cover-view class="map_panel_btn3" style=''>
       卫星准备中
-    </cover-view>
-    <cover-view class="map_panel_btn4" style=''>
+    </cover-view> -->
+    <!-- <cover-view class="map_panel_btn4" style=''>
       <cover-image src='{{Path1}}' class='floatbtn5'></cover-image>
-    </cover-view>
-  </cover-view>
+    </cover-view> -->
+  <!-- </cover-view> -->
 
 
-  <cover-image class="map_panel2" style='display:{{end_follow}}' src="{{btn2}}">
+  <cover-image class="map_panel" style='display:{{end_follow}};margin-left: {{marginLeft}}px;' src="{{btn2}}" bindtap='listen_end_follow'>
   </cover-image>
-  <cover-view bindtap='listen_end_follow' class="map_panel2" style='display:{{end_follow}};bottom:-60rpx'>
-    <cover-view class="map_panel_btn1" style=''>
+  <!-- <cover-view bindtap='listen_end_follow' class="map_panel" style='display:{{end_follow}};bottom:-40rpx;margin-left: {{marginLeft}}px;'> -->
+    <!-- <cover-view class="map_panel_btn1" style='font-size: 26rpx'>
       关闭追踪模式
-    </cover-view>
-    <cover-view class="map_panel_btn2" style=''>
+    </cover-view> -->
+    <!-- <cover-view class="map_panel_btn2" style=''>
       当前为追踪模式 1分钟定位一次
-    </cover-view>
-  </cover-view>
+    </cover-view> -->
+  <!-- </cover-view> -->
 </map>

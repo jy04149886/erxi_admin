@@ -88,83 +88,11 @@ Page({
       })
       return false
     } else {
-      // wx.navigateTo({
-      //   url: '/pages/usercenter/index'
-      // })
-      // return false
-      wx.request({
-        url: 'https://www.ju2xi.com/user/profile/getuserdevicelist',
-        data: {
-          userid: userid
-        },
-        header: {
-          'content-type': 'application/json' // 默认值
-        },
-        success: function (res) {
-          var device_last = res.data.device_last
-          var device_list = res.data.device_list
-          if (device_list.length == 0) {
-            wx.redirectTo({
-              url: '/pages/no_device/index'
-            })
-            return false
-          }
-          if (!device_last) {
-            // wx.showToast({
-            //   title: '请选择当前设备',
-            //   icon: 'success',
-            //   duration: 2000
-            // })
-            wx.redirectTo({
-              url: '/pages/usercenter/index'
-            })
-            return false
-          } else {
-            wx.redirectTo({
-              url: '/pages/home/index'
-            })
-            return false
-          }
-        }
+      wx.redirectTo({
+        url: '/pages/home/index'
       })
+      return
     }
-    // var code = wx.getStorageSync('code')
-    // if (!code) {
-    //   wx.login({
-    //     success: function (res) {
-    //       if (res.code) {
-    //         wx.setStorage({
-    //           key: "code",
-    //           data: res.code
-    //         })
-    //       } else {
-    //         console.log('登录失败！' + res.errMsg)
-    //       }
-    //     }
-    //   });
-    // }
-
-    // wx.checkSession({
-    //   success: function () {
-    //     //session_key 未过期，并且在本生命周期一直有效
-    //   },
-    //   fail: function () {
-    //     // session_key 已经失效，需要重新执行登录流程
-    //     wx.login({
-    //       success: function (res) {
-    //         if (res.code) {
-    //           wx.setStorage({
-    //             key: "code",
-    //             data: res.code
-    //           })
-    //         } else {
-    //           console.log('登录失败！' + res.errMsg)
-    //         }
-    //       }
-    //     });
-    //   }
-    // })
-
   },
 
   userInfoReadyCallback: function (res) {

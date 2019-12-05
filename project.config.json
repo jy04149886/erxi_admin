@@ -10,8 +10,10 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.3.0",
 	"appid": "wx9f257ac6c3a110d0",
-	"projectname": "%E5%AE%B6%E6%9C%89%E4%BA%8C%E5%96%9C1",
+	"projectname": "erxi",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

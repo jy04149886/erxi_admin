@@ -4,7 +4,7 @@ const app = getApp();
 var userid;
 var user_token = wx.getStorageSync('user_token');
 var imageSize = app.globalData.imageSize;
-var is_page_init=0
+var is_page_init = 0
 Page({
   data: {
     mine_add: '/pages/images/mine_add' + imageSize + '.png',
@@ -14,13 +14,16 @@ Page({
     mine_que: '/pages/images/mine_que' + imageSize + '.png',
     mine_call: '/pages/images/mine_call' + imageSize + '.png',
     mine_que: '/pages/images/mine_que' + imageSize + '.png',
-    mine_bg: '/pages/images/mine_bg' + imageSize + '.png',
-    more_bg_nol: '/pages/images/more_bg_nol' + imageSize + '.png',
+    mine_bg: '/pages/images/device_bg' + imageSize + '.png',
+    more_bg_nol: '/pages/images/device_bg_nol' + imageSize + '.png',
     head_mine: '/pages/images/head_mine' + imageSize + '.png',
+    is_sub_bg: 'background-image:url(' + 'http://www.ju2xi.com/wx/images/jianhuren_bg' + imageSize + '.png)',
+    is_sub_bg_nosel: 'background-image:url(' + 'http://www.ju2xi.com/wx/images/jianhuren_bg_unsel' + imageSize + '.png)',
+    main_bg: 'background-image:url(' + 'http://www.ju2xi.com/wx/images/device_bg' + imageSize + '.png)',
+    main_bg_nosel: 'background-image:url(' + 'http://www.ju2xi.com/wx/images/device_bg_nol' + imageSize + '.png)',
   },
   onLoad: function () {
     var _that = this
-
     wx.getStorage({
       key: 'userid',
       complete: function (res) {
@@ -68,7 +71,11 @@ Page({
   //   })
   // },
   listenItemDetail: function (e) {
-    var url = "/pages/item_detail/index?d_id=" + e.target.dataset.id
+    if (e.currentTarget.dataset.sub > 0) {
+      var url = "/pages/item_detail_sub/index?d_id=" + e.target.dataset.id
+    } else {
+      var url = "/pages/item_detail/index?d_id=" + e.target.dataset.id
+    }
     wx.navigateTo({
       url: url
     })
@@ -77,7 +84,7 @@ Page({
     var id = e.detail.value
     this.changecurrentdevice(id)
     // wx.navigateTo({
-    //   url: '/pages/home/index'
+    //   url: 'https://www.ju2xi.com/wx/home/index'
     // })
   },
   changecurrentdevice: function (id) {

@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container pagestyle" style='height:{{windowHeight*0.3}}px'>
+  <view class="userinfo">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatar}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{device_name}}</text>
+    <!-- <button class="xufei" bindtap='listenCharg' data-value="{{device_id}}">续费</button>
+    <button class="editinfobtn" bindtap='editinfobtn'>编辑资料</button> -->
+  </view>
+  <view class="info_view1">
+    <!-- <text class="info_view1_text1">剩余信息数量</text> -->
+    <text class="info_view1_text2">流量过期时间</text>
+  </view>
+  <view class="info_view2">
+    <!-- <text class="info_view2_text1">{{text_number}}</text> -->
+    <text class="info_view2_text2">{{end_time}}</text>
+  </view>
+
+</view>
+<view class="textBtn" style='height:{{windowHeight*0.7}}px'>
+  <button class="unbindbtn" bindtap='unbinddevice'>
+    <text style='color:#fff'>解除绑定</text>
+  </button>
+</view>
